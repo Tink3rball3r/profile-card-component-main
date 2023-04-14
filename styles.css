@@ -46,13 +46,24 @@ img {
 
 /* mobile syles */
 body {
+	position: relative;
 	height: 100vh;
-	background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
 	background-color: var(--dark-cyan);
-	background-size: 120%, 100%;
-	background-repeat: no-repeat no-repeat;
-	background-position: -200px -100px, 200% 120%;
 	/* maybe try absolute positioning for the bg images */
+}
+.bubble-top,
+.bubble-bottom {
+	position: absolute;
+}
+
+.bubble-top {
+	right: 50%;
+	top: -10%;
+}
+
+.bubble-bottom {
+	left: 50%;
+	bottom: -10%;
 }
 
 main {
@@ -61,6 +72,7 @@ main {
 	background: var(--white) url(images/bg-pattern-card.svg) no-repeat;
 	background-size: 100%;
 	border-radius: 2rem;
+	z-index: 1;
 }
 
 .user-image img {
@@ -116,6 +128,20 @@ span {
 	body {
 		background-size: 80%, 80%;
 		background-position: -150% 150%, 200% -100%;
+	}
+
+	.bubble-top,
+	.bubble-bottom {
+		width: 70%;
+	}
+
+	.bubble-top {
+		top: -80%;
+	}
+
+	.bubble-bottom {
+		left: 45%;
+		bottom: -100%;
 	}
 
 	main {
