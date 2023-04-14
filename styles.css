@@ -20,6 +20,11 @@ html {
 	box-sizing: border-box;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 img {
 	width: 100%;
 	height: auto;
@@ -39,14 +44,81 @@ img {
 	font-weight: 700;
 }
 
-main {
-	height: 400px;
-	width: 90%;
-	background-color: red;
-	border-radius: 2rem;
-}
-
 /* mobile syles */
 body {
 	height: 100vh;
+	background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+	background-color: var(--dark-cyan);
+	background-size: 120%, 100%;
+	background-repeat: no-repeat no-repeat;
+	background-position: -200px -100px, 200% 120%;
+	/* maybe try absolute positioning for the bg images */
+}
+
+main {
+	width: 90%;
+	padding: 0 0 3rem 0;
+	background: var(--white) url(images/bg-pattern-card.svg) no-repeat;
+	background-size: 100%;
+	border-radius: 2rem;
+}
+
+.user-image img {
+	max-width: 30%;
+	margin: 25% auto 0 auto;
+	border-radius: 50%;
+	border: 0.5rem solid var(--white);
+}
+.user-name {
+	margin: 3rem 0 1rem 0;
+	font-size: 1.2rem;
+}
+span {
+	font-weight: 400;
+	color: var(--dark-gray);
+	padding: 0 0 0 0.5rem;
+}
+.user-location {
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--dark-gray);
+	margin: 0 0 4rem 0;
+}
+.user-name,
+.user-location {
+	text-align: center;
+}
+
+.activity {
+	justify-content: space-evenly;
+	border-top: 0.1rem solid var(--dark-gray);
+	padding: 3rem 0 0 0;
+}
+
+.activity h3 {
+	margin: 0;
+	padding: 0 0 1rem 0;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.activity span {
+	font-size: 1.5rem;
+}
+.likes,
+.followers,
+.photos {
+	text-align: center;
+}
+
+/* desktop styles */
+@media only screen and (min-width: 70rem) {
+	body {
+		background-size: 80%, 80%;
+		background-position: -150% 150%, 200% -100%;
+	}
+
+	main {
+		max-width: 40rem;
+	}
 }
